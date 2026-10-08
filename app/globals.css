@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* Surfaces */
+  --color-bg: #09090a;
+  --color-card: #141416;
+  --color-raised: #1c1c1f;
+  --color-line: #26262a;
+
+  /* Ink */
+  --color-ink: #f4f4f5;
+  --color-soft: #b4b4bb;
+  --color-muted: #7c7c85;
+
+  /* Brand accent + chart series (validated on the card surface) */
+  --color-accent: #5b8def;
+  --color-series-1: #5b8def;
+  --color-series-2: #e06c28;
+  --color-series-3: #1fa463;
+  --color-series-4: #9477f0;
+  --color-series-5: #b38a12;
+
+  /* Status */
+  --color-good: #34c77b;
+  --color-warn: #e3b341;
+  --color-bad: #ef5f5f;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans), system-ui, sans-serif;
+}
+
+/* Diagonal texture from the brand's empty chart tracks. */
+.track {
+  background-color: var(--color-raised);
+  background-image: repeating-linear-gradient(
+    135deg,
+    transparent 0 5px,
+    rgb(255 255 255 / 0.035) 5px 6px
+  );
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
